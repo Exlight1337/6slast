@@ -16,7 +16,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 }
 
 func Upload(w http.ResponseWriter, r *http.Request) {
-	file, header, err := r.FormFile("file")
+	file, header, err := r.FormFile("myFile")
 	if err != nil {
 		http.Error(w, "Не удалось получить файл: "+err.Error(), http.StatusInternalServerError)
 		return
